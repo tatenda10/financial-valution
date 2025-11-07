@@ -3,8 +3,12 @@ import { useAuth } from '../contexts/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faTachometerAlt, 
-  faTable,
-  faBuilding,
+  faCalculator,
+  faChartLine,
+  faPercent,
+  faNewspaper,
+  faFileAlt,
+  faUser,
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,8 +17,12 @@ const Sidebar = ({ open, setOpen }) => {
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: faTachometerAlt },
-    { name: 'Companies', href: '/dashboard/companies', icon: faBuilding },
-    { name: 'Data Input Sheet', href: '/dashboard/data-input', icon: faTable },
+    { name: 'Valuation Details', href: '/dashboard/valuation', icon: faCalculator },
+    { name: 'Financial Performance', href: '/dashboard/financial-performance', icon: faChartLine },
+    { name: 'Ratio Analysis', href: '/dashboard/ratio-analysis', icon: faPercent },
+    { name: 'News & Insights', href: '/dashboard/news', icon: faNewspaper },
+    { name: 'Reports', href: '/dashboard/reports', icon: faFileAlt },
+    { name: 'Profile', href: '/dashboard/profile', icon: faUser },
   ];
 
   return (

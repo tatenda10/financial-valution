@@ -6,16 +6,13 @@ import Login from './pages/auth/Login';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
-import DataInputOverview from './pages/input-data/DataInputOverview';
+import ValuationDetails from './pages/ValuationDetails';
+import FinancialPerformance from './pages/FinancialPerformance';
+import RatioAnalysis from './pages/RatioAnalysis';
+import NewsInsights from './pages/NewsInsights';
+import Reports from './pages/Reports';
+import Profile from './pages/Profile';
 import DataInputSheet from './pages/input-data/DataInputSheet';
-import CompaniesList from './pages/companies/CompaniesList';
-import CompaniesListPage from './pages/companies/CompaniesListPage';
-import CompanyProfile from './pages/companies/CompanyProfile';
-import FinancialSummary from './pages/companies/FinancialSummary';
-import RatiosScoring from './pages/companies/RatiosScoring';
-import ValuationDCF from './pages/companies/ValuationDCF';
-import NewsResearch from './pages/companies/NewsResearch';
-import UploadData from './pages/upload-data/UploadData';
 import { initializeMockData } from './utils/mockData';
 
 function AppRoutes() {
@@ -41,16 +38,13 @@ function AppRoutes() {
         </ProtectedRoute>
       }>
         <Route index element={<Dashboard />} />
-        <Route path="companies" element={<CompaniesListPage />} />
-        <Route path="companies/:id" element={<CompanyProfile />} />
-        <Route path="companies/:id/financial-summary" element={<FinancialSummary />} />
-        <Route path="companies/:id/ratios" element={<RatiosScoring />} />
-        <Route path="companies/:id/valuation" element={<ValuationDCF />} />
-        <Route path="companies/:id/news" element={<NewsResearch />} />
+        <Route path="valuation" element={<ValuationDetails />} />
+        <Route path="financial-performance" element={<FinancialPerformance />} />
+        <Route path="ratio-analysis" element={<RatioAnalysis />} />
+        <Route path="news" element={<NewsInsights />} />
+        <Route path="reports" element={<Reports />} />
+        <Route path="profile" element={<Profile />} />
         <Route path="data-input" element={<DataInputSheet />} />
-        <Route path="data-input/overview" element={<DataInputOverview />} />
-        <Route path="upload-data" element={<UploadData />} />
-        <Route path="view-data" element={<CompaniesList />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
